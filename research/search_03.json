@@ -1,0 +1,360 @@
+{
+  "schema_version": "1.0",
+  "request": {
+    "queries": [
+      "飞鹤 AI 大模型 合作 2026"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "time_range": null,
+    "requested_limit": 8
+  },
+  "routes": [
+    {
+      "platform": "web",
+      "backend": "anysearch",
+      "mode": "search",
+      "reason": "public_web_default",
+      "login_state_used": false,
+      "status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "web:dc1aec8386237b40ec43",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 1,
+      "title": "2026 年 9 月国内外主流大模型横向硬核评测：价格、算力、业务场景全...",
+      "url": "https://jishuzhan.net/article/2096759187045535745",
+      "canonical_url": "https://jishuzhan.net/article/2096759187045535745",
+      "snippet": "Sep 6, 2026 · 进入 2026 年 9 月，大模型市场呈现明显分化：海外旗舰继续冲高复杂推理与 Agent 能力，国内 MoE 模型集中开源，Flash 轻量模型开启惨烈价格战，同时闭源 API、开源可私有化两套路线并行发展。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "ZNoidFshsbloQ_ftJ6jXQ8dlvVPA2Sbv4AAlrVTUmf4"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:07065ca9734b02497988",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 2,
+      "title": "2026 AI大模型技术全景与开发者进阶白皮书-腾讯云开发者社区-腾讯云",
+      "url": "https://cloud.tencent.com/developer/article/2611702",
+      "canonical_url": "https://cloud.tencent.com/developer/article/2611702",
+      "snippet": "Jan 3, 2026 · 2026年AI大模型技术已从实验工具发展为可依赖的生产系统，Transformer架构仍是核心基石。 开发者角色转向智能系统架构师，聚焦意图工程、GraphRAG等关键技术。 企业级AI应用需解决语义孤岛、多模态检索等挑战，安全与工程化部署成为竞争焦点。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "Oz0jG2AfpaBQ7KjiN6K6sfzrteipdQDUGYjhJezM52U"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:d8a5476abc878298b050",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 3,
+      "title": "2026 上半年 AI 大模型全景盘点：38 款新品、六大赛道、格局全面洗牌",
+      "url": "https://clawpk.net/articles/161-h1-2026-ai-model-landscape-review",
+      "canonical_url": "https://clawpk.net/articles/161-h1-2026-ai-model-landscape-review",
+      "snippet": "Jun 25, 2026 · 2026年上半年，AI大模型领域经历了一场前所未有的密集爆发：从百度文心5.0到字节豆包2.1 Pro，38款重要模型以几乎每周一款的节奏密集发布。 中国力量全面崛起、多模态成为主战场、迭代周期压缩至以周计——上半年的技术竞赛刚刚落幕，下半年的大战已经启幕。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "-g3OLNtTl0AmrlI7TV4LgGrjc7mim_Sj1yOPniRNzWY"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:a4913d6983880f2810b2",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 4,
+      "title": "中国飞鹤×火山引擎：436个智能体走进乳业生产一线 - 中国日报网",
+      "url": "https://cn.chinadaily.com.cn/a/202608/27/WS6a8ffbade4b09a165c7866ff.html",
+      "canonical_url": "https://cn.chinadaily.com.cn/a/202608/27/WS6a8ffbade4b09a165c7866ff.html",
+      "snippet": "Aug 27, 2026 · 把AI做成可复制的组织能力 随着AI应用不断深入，飞鹤正在将一个个业务场景沉淀为统一的平台能力和组织机制。 第一，建设统一平台，让AI应用能够快速复制。 2026年飞鹤将数智化战略升级为“3+3+2”，新增AI能力中台，火山引擎成为其AI转型战略合作伙伴。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "AtGL-DTdEo4D9hpPhArdCb8V8OmE62yD4FVxjnBFmkY"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:a217476b0a45abcbe1d7",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 5,
+      "title": "飞鹤全面接入DeepSeek 引领乳业数智化变革|飞鹤_新浪财经_新浪网",
+      "url": "https://finance.sina.com.cn/roll/2025-02-20/doc-inemcpfe4627361.shtml",
+      "canonical_url": "https://finance.sina.com.cn/roll/2025-02-20/doc-inemcpfe4627361.shtml",
+      "snippet": "Feb 20, 2025 · 作为国内全面部署DeepSeek大模型的乳企，飞鹤将以DeepSeek为基础，构建起覆盖包括农牧生产、供应保障、渠道营销、电子商务、品牌宣传、终端支持 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "51P1PXmkCEea2LQul-9W3gQbUb5Ukzhu4XCd7zzhrIc"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:c816bdde68926eef326e",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 6,
+      "title": "飞鹤全面接入DeepSeek 引领乳业数智化变革_数字化_转型_模型",
+      "url": "https://www.sohu.com/a/861343084_115571",
+      "canonical_url": "https://www.sohu.com/a/861343084_115571",
+      "snippet": "Feb 20, 2025 · 自2018年全面实施数字化转型战略开始，2024年，伴随着AI的强势发展，飞鹤将数智化战略升级为“3+3+2”体系，增加了AI能力中台，以探索AI在各类业务场景的应用落地。 以数字化促进奶业高质量发展的飞鹤，也收获了行业内外的众多认可。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "yiPWbanpOmApmarJ88cfaSTsa8bp7UyiuHI_JJQUJ0s"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:c46dc65eefc278642694",
+      "query": "飞鹤 AI 大模型 合作 2026",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 7,
+      "title": "飞鹤：AI引领的数字化转型，从试点到全局｜案例研究 | JOTO AI 智库",
+      "url": "https://joto.ai/blog/archive/2024082697605",
+      "canonical_url": "https://joto.ai/blog/archive/2024082697605",
+      "snippet": "02 飞鹤与火山引擎：共创AI赋能的数字化转型之路 飞鹤携手火山引擎，共同打造了一个三步走的AI建设方案，旨在将AI技术深度整合到企业的数字化转型中。 这一方案从试点项目开始，逐步扩展至全面的能力建设和最终的全局AI应用实施。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:14Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5fe893126d167de7e15f315cdac61c18",
+          "expires_at": "2026-10-15T07:30:14Z",
+          "signature": "MFCwwbzaN3GPNkai9QLTU7o4PWSyxW0Pi--wlWEQB-Y"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "backend": "anysearch",
+      "mode": "search",
+      "query_count": 1,
+      "returned_count": 7,
+      "backend_reported_count": 7,
+      "truncated": false,
+      "login_state_used": false,
+      "parse_status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ],
+      "elapsed_ms": 5268
+    }
+  ],
+  "errors": []
+}

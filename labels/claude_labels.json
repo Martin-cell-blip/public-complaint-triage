@@ -1,0 +1,371 @@
+[
+  {
+    "id": "17402255409",
+    "category": "活动权益",
+    "evidence": "联系客服参加新客买一送一活动",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17402208787",
+    "category": "活动权益",
+    "evidence": "集罐一直显示一",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17402163961",
+    "category": "活动权益",
+    "evidence": "锁定我剩余3罐补贴奶粉无法领取",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17402099314",
+    "category": "订单发货",
+    "evidence": "被该店铺恶意上传为异常订单、拒绝发货",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17402080517",
+    "category": "活动权益",
+    "evidence": "客服告知我的账号存在注销记录，无法参与活动",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "账号问题与活动权益并存",
+    "batch_no": null
+  },
+  {
+    "id": "17401992912",
+    "category": "质量安全",
+    "evidence": "连续两罐检出异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401954202",
+    "category": "活动权益",
+    "evidence": "扫码兑换四送一活动，显示活动已过期",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17401927603",
+    "category": "订单发货",
+    "evidence": "说相同地址不能买两箱",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17401788734",
+    "category": "活动权益",
+    "evidence": "赠品滑板车存在质量缺陷，踏板内部鼓包凸起",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17401620413",
+    "category": "活动权益",
+    "evidence": "内码丢失需补码+出生证明上传报错",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17401610603",
+    "category": "质量安全",
+    "evidence": "冲调完成的奶液中清晰发现虫子异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": "5F26QL202AI62"
+  },
+  {
+    "id": "17401506340",
+    "category": "质量安全",
+    "evidence": "给孩子冲奶粉时发现里面有虫子",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401443731",
+    "category": "质量安全",
+    "evidence": "发现其中一罐奶粉罐内有异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401352501",
+    "category": "质量安全",
+    "evidence": "在奶粉罐内发现虫子",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401290214",
+    "category": "质量安全",
+    "evidence": "勺子上有不知名的黑色异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401285142",
+    "category": "质量安全",
+    "evidence": "冲泡时发现奶粉内存在不明异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17401080047",
+    "category": "活动权益",
+    "evidence": "承诺的赠品不发货，多次协商无效",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400940389",
+    "category": "订单发货",
+    "evidence": "商家已地址异常为由拒绝发货",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "拒发货与赠品问题并存",
+    "batch_no": null
+  },
+  {
+    "id": "17400916652",
+    "category": "质量安全",
+    "evidence": "舀了两勺后发现多颗褐色状颗粒异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400909737",
+    "category": "活动权益",
+    "evidence": "说扫码参加12送1的活动、到11了突然没有了",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400866530",
+    "category": "活动权益",
+    "evidence": "本人带孩子旅游回来扫码集罐，显示不成功",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400808678",
+    "category": "质量安全",
+    "evidence": "混入异物存在严重安全隐患",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400781382",
+    "category": "质量安全",
+    "evidence": "开最后一桶发现有异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400743935",
+    "category": "质量安全",
+    "evidence": "喝到第四罐的时候发现奶粉有味道了",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400675670",
+    "category": "质量安全",
+    "evidence": "打开一罐奶粉中发现异物，絮状物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400551300",
+    "category": "质量安全",
+    "evidence": "宝宝吃完后马上拉稀且拉出来的是奶水状",
+    "health_signal": true,
+    "needs_review": true,
+    "review_reason": "食用后出现腹泻症状",
+    "batch_no": null
+  },
+  {
+    "id": "17400135464",
+    "category": "质量安全",
+    "evidence": "发现奶粉罐壁粘上不明物体，食品异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400531228",
+    "category": "活动权益",
+    "evidence": "并未提前告知扫码手机号需和报名资料手机号相同",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400496529",
+    "category": "质量安全",
+    "evidence": "发现了红色硬块异物",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400397840",
+    "category": "订单发货",
+    "evidence": "回购的商品，商家拒绝发货，说订单异常",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "权益卡与拒发货问题并存",
+    "batch_no": null
+  },
+  {
+    "id": "17400368536",
+    "category": "质量安全",
+    "evidence": "其中一听在冲调中出现死虫子",
+    "health_signal": false,
+    "needs_review": true,
+    "review_reason": "质量安全类，需人工核实",
+    "batch_no": null
+  },
+  {
+    "id": "17400367912",
+    "category": "活动权益",
+    "evidence": "飞鹤虚假礼赠承诺，多次推脱不认账",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400304643",
+    "category": "订单发货",
+    "evidence": "下单时卖家承诺7月16日发货，截止至今卖家仍然不发货",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400293346",
+    "category": "活动权益",
+    "evidence": "事后商家拒发赠品，说是实付金额未达标",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400267151",
+    "category": "活动权益",
+    "evidence": "产品包装上承诺的积分拒不发放",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17400228971",
+    "category": "活动权益",
+    "evidence": "商家讲现在不能扫码了，之前都讲可以的",
+    "health_signal": true,
+    "needs_review": true,
+    "review_reason": "有身体症状且多问题并存",
+    "batch_no": null
+  },
+  {
+    "id": "17400167344",
+    "category": "活动权益",
+    "evidence": "其中5罐仅计入积分、不统计集罐数量",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17399898918",
+    "category": "质量安全",
+    "evidence": "奶粉出厂罐内错误放置二段黄色大勺",
+    "health_signal": true,
+    "needs_review": true,
+    "review_reason": "量勺错配且婴儿出现症状",
+    "batch_no": null
+  },
+  {
+    "id": "17399894158",
+    "category": "活动权益",
+    "evidence": "扫了五罐都没有记录只有积分",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17399842503",
+    "category": "活动权益",
+    "evidence": "扫码显示扫码产品超出活动范围",
+    "health_signal": false,
+    "needs_review": false,
+    "review_reason": "",
+    "batch_no": null
+  },
+  {
+    "id": "17399835541",
+    "category": "质量安全",
+    "evidence": "奶粉吃到中后端发现有一个虫子",
+    "health_signal": true,
+    "needs_review": true,
+    "review_reason": "异物且婴儿出现吐奶症状",
+    "batch_no": null
+  }
+]

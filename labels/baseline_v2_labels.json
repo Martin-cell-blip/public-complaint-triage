@@ -1,0 +1,289 @@
+[
+ {
+  "id": "17402255409",
+  "category": "活动权益",
+  "matched_keyword": "权益",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17402208787",
+  "category": "活动权益",
+  "matched_keyword": "集罐",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17402163961",
+  "category": "活动权益",
+  "matched_keyword": "补贴",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17402099314",
+  "category": "订单发货",
+  "matched_keyword": "拒发",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17402080517",
+  "category": "活动权益",
+  "matched_keyword": "买一赠一",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17401992912",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401954202",
+  "category": "活动权益",
+  "matched_keyword": "活动",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17401927603",
+  "category": "订单发货",
+  "matched_keyword": "拒发",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17401788734",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401620413",
+  "category": "活动权益",
+  "matched_keyword": "活动",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17401610603",
+  "category": "质量安全",
+  "matched_keyword": "虫",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401506340",
+  "category": "质量安全",
+  "matched_keyword": "虫",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401443731",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401352501",
+  "category": "质量安全",
+  "matched_keyword": "虫",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401290214",
+  "category": "质量安全",
+  "matched_keyword": "勺",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401285142",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17401080047",
+  "category": "订单发货",
+  "matched_keyword": "不发货",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400940389",
+  "category": "订单发货",
+  "matched_keyword": "拒绝发货",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400916652",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400909737",
+  "category": "活动权益",
+  "matched_keyword": "扫码",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400866530",
+  "category": "活动权益",
+  "matched_keyword": "集罐",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400808678",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400781382",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400743935",
+  "category": "质量安全",
+  "matched_keyword": "怪味",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400675670",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400551300",
+  "category": "质量安全",
+  "matched_keyword": "拉稀",
+  "health_signal": true,
+  "needs_review": true
+ },
+ {
+  "id": "17400135464",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400531228",
+  "category": "活动权益",
+  "matched_keyword": "买一赠一",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400496529",
+  "category": "质量安全",
+  "matched_keyword": "异物",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400397840",
+  "category": "订单发货",
+  "matched_keyword": "不发货",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400368536",
+  "category": "质量安全",
+  "matched_keyword": "虫",
+  "health_signal": false,
+  "needs_review": true
+ },
+ {
+  "id": "17400367912",
+  "category": "活动权益",
+  "matched_keyword": "礼赠",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400304643",
+  "category": "订单发货",
+  "matched_keyword": "不发货",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400293346",
+  "category": "订单发货",
+  "matched_keyword": "拒发",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400267151",
+  "category": "活动权益",
+  "matched_keyword": "积分",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17400228971",
+  "category": "质量安全",
+  "matched_keyword": "拉肚子",
+  "health_signal": true,
+  "needs_review": true
+ },
+ {
+  "id": "17400167344",
+  "category": "活动权益",
+  "matched_keyword": "活动",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17399898918",
+  "category": "质量安全",
+  "matched_keyword": "勺",
+  "health_signal": true,
+  "needs_review": true
+ },
+ {
+  "id": "17399894158",
+  "category": "活动权益",
+  "matched_keyword": "集罐",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17399842503",
+  "category": "活动权益",
+  "matched_keyword": "集罐",
+  "health_signal": false,
+  "needs_review": false
+ },
+ {
+  "id": "17399835541",
+  "category": "质量安全",
+  "matched_keyword": "虫",
+  "health_signal": true,
+  "needs_review": true
+ }
+]

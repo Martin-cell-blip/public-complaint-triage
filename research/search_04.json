@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.0",
+  "request": {
+    "queries": [
+      "飞鹤 消费者 投诉 售后 数字化 客服 AI"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "time_range": null,
+    "requested_limit": 8
+  },
+  "routes": [
+    {
+      "platform": "web",
+      "backend": "anysearch",
+      "mode": "search",
+      "reason": "public_web_default",
+      "login_state_used": false,
+      "status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "web:4a310c48ead026393d4f",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 1,
+      "title": "探索AI赋能的未来：飞鹤数字化转型之旅与行业创新实录",
+      "url": "https://www.sohu.com/a/836029467_121902920",
+      "canonical_url": "https://www.sohu.com/a/836029467_121902920",
+      "snippet": "在数字化浪潮席卷的当下，人工智能（AI）正逐步成为企业重塑业务流程与提升服务质量的核心驱动力。飞鹤，作为中国乳制品行业的先锋，早在2018年就启动了全面的数字化转型，提出了\"3+2+2\"战略布局。进入2023年，AI大模型技术的蓬勃发展促使飞鹤对其数字化战略进行全面升级，将原有的\"3+2+2 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "WLq1cgyiXqz5ZhsIns67BRe3Dsf21OR6QM3O7eU4_Lg"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:c46dc65eefc278642694",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 2,
+      "title": "飞鹤：Ai引领的数字化转型，从试点到全局｜案例研究 | Joto Ai 智库",
+      "url": "https://joto.ai/blog/archive/2024082697605",
+      "canonical_url": "https://joto.ai/blog/archive/2024082697605",
+      "snippet": "02 飞鹤与火山引擎：共创AI赋能的数字化转型之路 飞鹤携手火山引擎，共同打造了一个三步走的AI建设方案，旨在将AI技术深度整合到企业的数字化转型中。 这一方案从试点项目开始，逐步扩展至全面的能力建设和最终的全局AI应用实施。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "YTA1CHldW-itVIHLTdTJwDGbY6kauEcGfuORVRL077U"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:78c2728f4190b690e71c",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 3,
+      "title": "飞鹤：Ai引领的数字化转型，从试点到全局｜案例研究 - 知乎",
+      "url": "https://zhuanlan.zhihu.com/p/716941800",
+      "canonical_url": "https://zhuanlan.zhihu.com/p/716941800",
+      "snippet": "02 飞鹤与火山引擎：共创AI赋能的 数字化转型之路 飞鹤携手 火山引擎，共同打造了一个三步走的AI建设方案，旨在将AI技术深度整合到企业的数字化转型中。 这一方案从试点项目开始，逐步扩展至全面的 能力建设 和最终的全局AI应用实施。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "NaHoKMBmhyaXshoXRhsCiOwf0l9AhPRfNmDBF_F_91Y"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:3e4a9ed028ad86a74b23",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 4,
+      "title": "飞鹤：AI引领的数字化转型，从试点到全局｜案例研究 - 53AI-AI知识库|企业AI知识库|大模型知识库|前线部署工程师|FDE|AIHub",
+      "url": "https://www.53ai.com/news/zhinengyingxiao/2024082697605.html",
+      "canonical_url": "https://www.53ai.com/news/zhinengyingxiao/2024082697605.html",
+      "snippet": "飞鹤开启以 AI 为核心的数字化转型新篇章，携手火山引擎打造三步走 AI 建设方案，从试点到全局构建 AI 应用生态。智能问答项目作为关键构成，通过\"数字人+大模型\"服务，实现 100%问答响应率和超 95%准确率，成为乳制品行业数字化转型的 AI 技术应用典范。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "sx0DA3Zjp5ctDrDajYC8M8M2PPUQ1LwYQew0xz2xezs"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:0c9d8d72961a3dbb466a",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 5,
+      "title": "飞鹤：AI引领的数字化转型，从试点到全局｜案例研究_wx6538daede7fc7的技术博客_51CTO博客",
+      "url": "https://blog.51cto.com/u_16323376/11859297",
+      "canonical_url": "https://blog.51cto.com/u_16323376/11859297",
+      "snippet": "02 飞鹤与火山引擎：共创AI赋能的数字化转型之路 飞鹤携手火山引擎，共同打造了一个三步走的AI建设方案，旨在将AI技术深度整合到企业的数字化转型中。 这一方案从试点项目开始，逐步扩展至全面的能力建设和最终的全局AI应用实施。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "wIYNKrJXnqCAXN1n653M8_XDtOKElu73nI6LDvnliV8"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:1d9f550a949a45ba3105",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 6,
+      "title": "AI巨浪之下，沃丰科技智能质检如何助力飞鹤综合提升企业客服能力",
+      "url": "https://www.bilibili.com/opus/957666050775711747",
+      "canonical_url": "https://www.bilibili.com/opus/957666050775711747",
+      "snippet": "沃丰科技AI场景落地专家GaussMind智能质检助力飞鹤乳业有效提升客服团队管理效率，降低质检人员工作强度。 对客服人员能力培训、标准FAQ调优等制度进行优化，进而提升企业综合客服能力。 具体而言，体现在以下三方面：",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "SHYIr5q5dIMPr5WWX7yTnOYzVEE8hTv4CM9a9bvGSkU"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:6856fce323d4ea300f0a",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 7,
+      "title": "飞鹤携手沃丰科技智能质检，演绎AI智能质检新示范|客服|乳业_网易订阅",
+      "url": "https://www.163.com/dy/article/J7SKHGC30518C444.html",
+      "canonical_url": "https://www.163.com/dy/article/J7SKHGC30518C444.html",
+      "snippet": "沃丰科技AI场景落地专家GaussMind智能质检助力飞鹤乳业有效提升客服团队管理效率，降低质检人员工作强度。 对客服人员能力培训、标准FAQ调优等制度进行优化，进而提升企业综合客服能力。 具体而言，体现在以下三方面：",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "n0bqZaBkybZYkHL7UgwKf8eZxdSSHOd7tXCyI7XWuxY"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:ab838af7f4e47982ff55",
+      "query": "飞鹤 消费者 投诉 售后 数字化 客服 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 8,
+      "title": "AI巨浪之下，智能质检如何助力飞鹤综合提升企业客服能力",
+      "url": "https://www.udesk.cn/ucm/report/52194",
+      "canonical_url": "https://www.udesk.cn/ucm/report/52194",
+      "snippet": "需要搭建全面、科学的客服服务标准，全面提升服务质量与效率。 2、客服服务管理盲区大 质控专员仅能覆盖2%的服务情况，无法把控客服整体的服务问题。 飞鹤期望借助AI技术实现全量自动质检，全面覆盖，快速发现服务问题。 3、客服服务质量评价量化难",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:30Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "8edae751ea90fb79a23314c465ae9b58",
+          "expires_at": "2026-10-15T07:30:30Z",
+          "signature": "yKI8w_XYPNPhdRaBuobz5pGwVAr71_VpW4uT9YA78nE"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "backend": "anysearch",
+      "mode": "search",
+      "query_count": 1,
+      "returned_count": 8,
+      "backend_reported_count": 8,
+      "truncated": false,
+      "login_state_used": false,
+      "parse_status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ],
+      "elapsed_ms": 2998
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+ "raw_rows": 41,
+ "public_rows": 41,
+ "dropped_keys": [],
+ "replacements": {
+  "platform_masked_identifier": {
+   "count": 7,
+   "complaint_ids": [
+    "17400808678",
+    "17401352501",
+    "17401788734",
+    "17402099314"
+   ]
+  }
+ },
+ "leftover_check": "passed"
+}

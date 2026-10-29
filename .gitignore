@@ -1,0 +1,21 @@
+# ---- 原始采集件与模型输入：含平台打码前的编号片段，不入仓库（公开版见 data/public/）----
+data/raw/
+data/ai_input.jsonl
+
+# ---- 二进制派生物（python src/01_prepare.py 重建）----
+data/case.db
+
+# ---- 根目录的完整版 Word（含面试讲稿与本机路径）；公开版在 docs/ ----
+/*.docx
+
+# ---- 开发过程截图与第三方文件（港交所公告 PDF 见 README 链接）----
+outputs/img/ui/
+research/*.pdf
+
+# ---- 本机与工具 ----
+.claude/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+~$*

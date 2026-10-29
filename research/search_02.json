@@ -1,0 +1,90 @@
+{
+  "schema_version": "1.0",
+  "request": {
+    "queries": [
+      "飞鹤 2026 中期业绩 线上 电商 渠道"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "time_range": null,
+    "requested_limit": 8
+  },
+  "routes": [
+    {
+      "platform": "web",
+      "backend": "anysearch",
+      "mode": "search",
+      "reason": "public_web_default",
+      "login_state_used": false,
+      "status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "web:9918d3b29a4ef768acb4",
+      "query": "飞鹤 2026 中期业绩 线上 电商 渠道",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 1,
+      "title": "150+分析工具专业看盘 - $0交易佣金首选moomoo - 华人优选投资交易平台",
+      "url": "https://www.bing.com/aclick?ld=e80QEZoqaR89YFIN4MFHYKaTVUCUzyx-YK_u_F-OCvNPyV7K14NFZKoH-vD_lO0MNNKVKafb1PmqHjxPMcSdXwI_8Hg0buvTD1MYAgW99vcPnu3rxqzSHW0bu-ZrrB_DzZIpxG-cQV434JZnQ_2bNG2kBGtYMIo9pS3VF2rNvfvvj5y3KYfxtttINEjZ2rgY3lDE7ngcQk2ZxMbJSSRxmMAIweCqY&u=aHR0cHMlM2ElMmYlMmZpbnZlc3QudXMubW9vbW9vLmNvbSUyZm9jJTNmZ2xvYmFsX2NvbnRlbnQlM2QlMjU3QiUyNTIycHJvbW90ZV9jb250ZW50JTI1MjIlMjUzQSUyNTIyNTA2JTI1MjIlMjUyQyUyNTIycHJvbW90ZV9pZCUyNTIyJTI1M0EyMDIwMyUyNTJDJTI1MjJwcm9tb3RlX3R5cGUlMjUyMiUyNTNBMTclMjUyQyUyNTIyc3ViX3Byb21vdGVfaWQlMjUyMiUyNTNBNzglMjU3RCUyNmNhbXBhaWduaWQlM2Q1MjQ2ODcxODQlMjZhZGdyb3VwaWQlM2QxMzEzOTE5NDIwMTE2MTc3JTI2dGFyZ2V0aWQlM2Rrd2QtODIxMjE4MzA2NTU3MjQlM2Fsb2MtMTY0JTI2bWF0Y2h0eXBlJTNkcCUyNm5ldHdvcmslM2RvJTI2ZGV2aWNlJTNkYyUyNmdjbGlkJTNkJTI2Y3JlYXRpdmUlM2QlMjZrZXl3b3JkJTNkJWU2JThhJTk1JWU4JWI1JTg0JTI1MjAlZTQlYmElYTQlZTYlOTglOTMlMjUyMCVlNSViOSViMyVlNSU4ZiViMCUyNnBsYWNlbWVudCUzZCUyNm1zY2xraWQlM2Q4ZDJjMGU1OTVmNDMxZDAyMWYwMjY0ODkzYmIzODljMQ&rlid=8d2c0e595f431d021f0264893bb389c1",
+      "canonical_url": "https://www.bing.com/aclick?ld=e80QEZoqaR89YFIN4MFHYKaTVUCUzyx-YK_u_F-OCvNPyV7K14NFZKoH-vD_lO0MNNKVKafb1PmqHjxPMcSdXwI_8Hg0buvTD1MYAgW99vcPnu3rxqzSHW0bu-ZrrB_DzZIpxG-cQV434JZnQ_2bNG2kBGtYMIo9pS3VF2rNvfvvj5y3KYfxtttINEjZ2rgY3lDE7ngcQk2ZxMbJSSRxmMAIweCqY&u=aHR0cHMlM2ElMmYlMmZpbnZlc3QudXMubW9vbW9vLmNvbSUyZm9jJTNmZ2xvYmFsX2NvbnRlbnQlM2QlMjU3QiUyNTIycHJvbW90ZV9jb250ZW50JTI1MjIlMjUzQSUyNTIyNTA2JTI1MjIlMjUyQyUyNTIycHJvbW90ZV9pZCUyNTIyJTI1M0EyMDIwMyUyNTJDJTI1MjJwcm9tb3RlX3R5cGUlMjUyMiUyNTNBMTclMjUyQyUyNTIyc3ViX3Byb21vdGVfaWQlMjUyMiUyNTNBNzglMjU3RCUyNmNhbXBhaWduaWQlM2Q1MjQ2ODcxODQlMjZhZGdyb3VwaWQlM2QxMzEzOTE5NDIwMTE2MTc3JTI2dGFyZ2V0aWQlM2Rrd2QtODIxMjE4MzA2NTU3MjQlM2Fsb2MtMTY0JTI2bWF0Y2h0eXBlJTNkcCUyNm5ldHdvcmslM2RvJTI2ZGV2aWNlJTNkYyUyNmdjbGlkJTNkJTI2Y3JlYXRpdmUlM2QlMjZrZXl3b3JkJTNkJWU2JThhJTk1JWU4JWI1JTg0JTI1MjAlZTQlYmElYTQlZTYlOTglOTMlMjUyMCVlNSViOSViMyVlNSU4ZiViMCUyNnBsYWNlbWVudCUzZCUyNm1zY2xraWQlM2Q4ZDJjMGU1OTVmNDMxZDAyMWYwMjY0ODkzYmIzODljMQ&rlid=8d2c0e595f431d021f0264893bb389c1",
+      "snippet": "只需开设1个账户，即可在任何地方交易股票和期权，还可享受7x24小时全天候专业客服服务。. 使用更多期权数据与工具、期权策略与订单类型，释放您的潜能。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:26Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "5558f5e1f450814780e04cdb022e3070",
+          "expires_at": "2026-10-15T07:30:26Z",
+          "signature": "nMPweY5tRjAv2FYGdkIFG-uH-8e50yKKw80SLUytheo"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "backend": "anysearch",
+      "mode": "search",
+      "query_count": 1,
+      "returned_count": 1,
+      "backend_reported_count": 1,
+      "truncated": false,
+      "login_state_used": false,
+      "parse_status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ],
+      "elapsed_ms": 12162
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,405 @@
+{
+  "schema_version": "1.0",
+  "request": {
+    "queries": [
+      "中国飞鹤 2025年度业绩 年报 数字化 AI"
+    ],
+    "platforms": [
+      "web"
+    ],
+    "time_range": null,
+    "requested_limit": 8
+  },
+  "routes": [
+    {
+      "platform": "web",
+      "backend": "anysearch",
+      "mode": "search",
+      "reason": "public_web_default",
+      "login_state_used": false,
+      "status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "web:dfc690b3c053cd8edfdb",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 1,
+      "title": "中国飞鹤2025年业绩财报深度分析 - 雪球",
+      "url": "https://xueqiu.com/7094914686/381359446",
+      "canonical_url": "https://xueqiu.com/7094914686/381359446",
+      "snippet": "1. 公司概况与研究背景 中国飞鹤 作为中国婴幼儿配方奶粉行业的领军企业，拥有60余年的发展历史，在国产奶粉崛起的浪潮中占据重要地位。然而，2025年中国飞鹤面临着前所未有的挑战：出生人口降至792万的历史新低，行业需求深度调整，市场竞争格局发生重大变化。在此背景下，深入分析中国飞 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "Ski05rWSj95mcEcdkg0oba03gTOW-X4p4JGAITy-SaE"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:4793b6534901609c5bf5",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 2,
+      "title": "中国飞鹤 (06186.hk)：2025年报内容摘要_股票频道_证券之星",
+      "url": "https://stock.stockstar.com/AN2026043000006869.shtml",
+      "canonical_url": "https://stock.stockstar.com/AN2026043000006869.shtml",
+      "snippet": "（原标题：2025年报） 中国飞鹤有限公司发布2025年度报告，报告期内实现收益人民币181.13亿元，净利润20.94亿元。公司持续推进乳蛋白自主创新 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "4aZyCfJ8kmejFjK77u6pYu7pXcZIkXhM1YGx0amielo"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:6418576fff732527cc3a",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 3,
+      "title": "华创证券:《中国飞鹤（06186.hk）2025 年报点评》-发现报告",
+      "url": "https://www.fxbaogao.com/detail/5323075",
+      "canonical_url": "https://www.fxbaogao.com/detail/5323075",
+      "snippet": "华创证券发布的《中国飞鹤（06186.HK）2025 年报点评》报告，获取完整报告，报告阅读，报告下载",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "zdiznP8TKlg1aCU7o2ivnqHczPdAK5AmLDnLtqgqv0g"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:e3b6b753ac8256be83ed",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 4,
+      "title": "中国飞鹤 (06186) - 2025 - 年度业绩 - Reportify",
+      "url": "https://reportify.cn/financials/1234671537345400832",
+      "canonical_url": "https://reportify.cn/financials/1234671537345400832",
+      "snippet": "收入和利润（同比变化） - 公司2025年收益为181.13亿元人民币，较去年减少12.7% [2] - 公司2025年年内溢利为20.94亿元人民币，较去年大幅减少42.7% [2] - 公司2025年每股基本盈利为人民币0.21元，较去年的人民币0.39元下降46.2% [2] [4] - 2025年公司总收益为18,112,585千元人民币，较2024年的20,748,550千元人民币下降12. ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "SoEwAyar2ioBkZbPEUICqOmnZtEMxCM2H6Rt-jBVNo8"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:8d4272ba15b9cf2ba019",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 5,
+      "title": "飞鹤2025年营收181.1亿 净利润20.9亿 连续7年中国销量第一",
+      "url": "https://xueqiu.com/4114761902/381386878",
+      "canonical_url": "https://xueqiu.com/4114761902/381386878",
+      "snippet": "中国飞鹤 （06186.HK）发布2025年业绩，全年营业收入181.1亿元，净利润20.9亿元，在行业调整期交出稳健答卷。欧睿数据显示，飞鹤婴配粉连续7年位居中国销量第一。财报显示，飞鹤正在从单一品类龙头，向\"全龄营养引领者\"进行系统性转型。首先，核心业务持续领跑。在\"更适合中国宝宝体质\"...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "Ki6VkwcTPPsAmFqz0YTIpcQN0-DTYPAFhninxz8Gfok"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:7e12b765399689c98153",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 6,
+      "title": "飞鹤2025年营收181.1亿元 科技创新驱动全龄营养转型",
+      "url": "https://app.xinhuanet.com/news/article.html?articleId=202603274fd9f77a3d9d4b9e963d944d5d7e39d1",
+      "canonical_url": "https://app.xinhuanet.com/news/article.html?articleId=202603274fd9f77a3d9d4b9e963d944d5d7e39d1",
+      "snippet": "飞鹤2025年营收181.1亿元 科技创新驱动全龄营养转型----3月26日，中国飞鹤发布2025年业绩报告。数据显示，2025年飞鹤全年实现营收181.1亿元，净利润20.9亿元，在行业需求深度调整周期中，展现出强劲的发展韧性。 业内人士分析，飞鹤的业绩是面对日益复杂的行业变化与消费结构的深度分级，依然持续 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "BLDjddoNVnqpxHS-aW-5knh5DpzHehavLzAtMeanPnM"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:b67d3f249e74eb519583",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 7,
+      "title": "飞鹤2025年营收181.1亿 净利润20.9亿 连续7年中国销量第一",
+      "url": "https://news.qq.com/rain/a/20260326A08KXC00",
+      "canonical_url": "https://news.qq.com/rain/a/20260326A08KXC00",
+      "snippet": "智通财经获悉，中国飞鹤（06186）发布2025年业绩，全年营业收入181.1亿元，净利润20.9亿元，在行业调整期交出稳健答卷。欧睿数据显示，飞鹤婴配粉 ...",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "-ybMrnZEUJZLTRh0urM3YTuqtgjULd0t87Q3CVPFRFQ"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    },
+    {
+      "candidate_id": "web:54bd79a1f5b270304962",
+      "query": "中国飞鹤 2025年度业绩 年报 数字化 AI",
+      "platform": "web",
+      "backend": "anysearch",
+      "rank": 8,
+      "title": "飞鹤2025年半年报：继续稳居第一，科技创新及全球化双轮驱动显成效",
+      "url": "https://www.sohu.com/a/929860085_121119110",
+      "canonical_url": "https://www.sohu.com/a/929860085_121119110",
+      "snippet": "智能化生产通过对生产全过程的精准控制，为消费者带来更高品质、更新鲜、更安全的产品。 今年7月，飞鹤作为\"全球首批AI乳企\"受邀出席2025世界人工智能大会，全面展示其AI技术在全产业链的应用成果。",
+      "author": null,
+      "published_at": null,
+      "content_type": "web_page",
+      "language": null,
+      "metrics": {
+        "likes": null,
+        "comments": null,
+        "collects": null,
+        "shares": null,
+        "views": null
+      },
+      "access": {
+        "visibility": "public",
+        "login_state_used": false
+      },
+      "verification": {
+        "status": "candidate",
+        "opened_original": false,
+        "checked_at": null
+      },
+      "provenance": {
+        "source_id": null,
+        "retrieved_at": "2026-10-15T05:30:08Z",
+        "route_reason": "public_web_default",
+        "anysearch_receipt": {
+          "version": 1,
+          "run_id": "3048ece182aa47f219a0f5057a663ecb",
+          "expires_at": "2026-10-15T07:30:08Z",
+          "signature": "dx9yP_8pArEx3LLSNy4m-aE0OtGbtHTiQjkGQHJT8mY"
+        }
+      },
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "backend": "anysearch",
+      "mode": "search",
+      "query_count": 1,
+      "returned_count": 8,
+      "backend_reported_count": 8,
+      "truncated": false,
+      "login_state_used": false,
+      "parse_status": "completed",
+      "limitations": [
+        "AnySearch result snippets are discovery text, not verified page content."
+      ],
+      "elapsed_ms": 1533
+    }
+  ],
+  "errors": []
+}

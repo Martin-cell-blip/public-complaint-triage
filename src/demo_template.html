@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>公开投诉分拣台 · 飞鹤星飞帆系列（个人概念验证）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 表面与文字 */
+  --bg:#f6f5f1; --surface:#fff; --surface-2:#f1efe9; --line:#e2ded4; --line-strong:#cbc5b8;
+  --ink:#1c1b19; --ink-2:#4f4b43; --ink-3:#6c675c;
+  /* 唯一主色：只给主操作与选中态 */
+  --primary:#1f4f46; --primary-ink:#fff; --primary-soft:#e3eeeb;
+  /* 依据（引文）与反馈 */
+  --evidence:#b7791f; --evidence-bg:#fbf3e2;
+  --ok:#2f6b4f; --ok-bg:#e5f1ea; --err:#a33a2a; --err-bg:#f8e7e3;
+  /* 类别：颜色只做辅助，类别名始终以文字出现 */
+  --c-q:#a33a2a; --c-q-bg:#f8e7e3; --c-a:#2e5e8c; --c-o:#4a5568; --c-x:#6c675c;
+  --focus:#0b57d0;
+  --r:6px; --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-5:24px; --sp-6:32px;
+  --sans:"IBM Plex Sans","PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --z-toolbar:10; --tb-h:0px;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.6 var(--sans);accent-color:var(--primary);-webkit-text-size-adjust:100%}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.vh{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:#fff;padding:8px 12px;z-index:99}
+.skip:focus{left:8px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 var(--sp-5)}
+
+/* 页头：一行说清用途 */
+header.top{border-bottom:1px solid var(--line);background:var(--surface)}
+header.top .wrap{display:flex;gap:var(--sp-4);align-items:center;justify-content:space-between;padding-block:var(--sp-4)}
+h1{font-size:20px;line-height:1.3;margin:0;font-weight:700;letter-spacing:.01em}
+.lede{margin:2px 0 0;color:var(--ink-2);font-size:14px}
+.tag{flex:none;margin:0;font:500 12px/1.4 var(--sans);color:var(--ink-2);border:1px solid var(--line-strong);border-radius:999px;padding:4px 10px;background:var(--surface-2)}
+.tag b{color:var(--ink);font-weight:600}
+
+main.wrap{padding-block:var(--sp-5) var(--sp-6)}
+h2{font-size:16px;line-height:1.4;margin:0;font-weight:600}
+.muted{color:var(--ink-2)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--sp-5)}
+
+/* 顶部免责声明：先于一切操作可见 */
+.notice{margin:0 0 var(--sp-4);padding:var(--sp-3) var(--sp-4);border:1px solid var(--line-strong);border-left:4px solid var(--evidence);border-radius:var(--r);background:var(--evidence-bg);font-size:13px;line-height:1.6;color:var(--ink-2)}
+.notice h2{font-size:14px;margin:0 0 var(--sp-1);color:var(--ink)}
+.notice ul{margin:0;padding-left:1.2em}
+.notice li{margin:0}
+.notice b{color:var(--ink);font-weight:600}
+
+/* 开始：示例为主，导入为辅 */
+.start{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:var(--sp-4);margin-bottom:var(--sp-4)}
+.start .panel{display:flex;flex-direction:column;gap:var(--sp-3)}
+.start p{margin:0}
+.sources{display:flex;flex-direction:column;gap:var(--sp-2);margin:var(--sp-1) 0 0;padding:var(--sp-3) 0 0;border-top:1px solid var(--line);list-style:none;font-size:13px;color:var(--ink-2)}
+.sources li{display:flex;gap:var(--sp-2);align-items:center}
+label.field{display:block;font-weight:600;font-size:14px;margin-bottom:var(--sp-1)}
+textarea{width:100%;min-height:96px;font:14px/1.6 var(--sans);padding:var(--sp-2) var(--sp-3);border:1px solid var(--line-strong);border-radius:var(--r);background:#fff;color:var(--ink);resize:vertical}
+.row-btns{display:flex;flex-wrap:wrap;gap:var(--sp-2);align-items:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 16px;font:600 14px/1.2 var(--sans);border-radius:var(--r);border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);cursor:pointer;text-decoration:none;transition:background-color .15s,border-color .15s}
+.btn:hover{background:var(--surface-2);border-color:var(--ink-3)}
+.btn.primary{background:var(--primary);border-color:var(--primary);color:var(--primary-ink)}
+.btn.primary:hover{background:#163c35}
+.btn.ghost{border-color:transparent;background:transparent;color:var(--primary);padding-inline:8px}
+.btn.ghost:hover{background:var(--primary-soft)}
+.btn.lg{min-height:44px;font-size:15px;padding-inline:20px}
+.file{position:relative}
+.file input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%}
+.file:has(input:focus-visible){outline:3px solid var(--focus);outline-offset:2px}
+.hint{margin:0;font-size:13px;color:var(--ink-2)}
+.msg{margin:0;font-size:14px;border-radius:var(--r);padding:var(--sp-2) var(--sp-3);display:none}
+.msg.show{display:block}
+.msg.error{background:var(--err-bg);color:var(--err)}
+
+/* 载入后：导入区收成一行 */
+.current{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:var(--sp-2) var(--sp-2) var(--sp-2) var(--sp-4)}
+.current p{margin:0;font-size:14px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
+
+/* 来源徽标：AI 与规则用文字区分，不只靠颜色 */
+.src{display:inline-flex;align-items:center;gap:4px;font:500 12px/1.3 var(--sans);padding:2px 8px;border-radius:999px;border:1px solid;white-space:nowrap}
+.src::before{font:600 11px var(--mono)}
+.src.ai{color:var(--primary);border-color:#9fbfb7;background:var(--primary-soft)}
+.src.ai::before{content:"AI"}
+.src.rule{color:var(--ink-2);border-color:var(--line-strong);background:var(--surface-2)}
+.src.rule::before{content:"规则"}
+
+/* 工作区：吸顶操作栏 */
+.work[hidden],#start[hidden]{display:none}
+.toolbar{position:sticky;top:0;z-index:var(--z-toolbar);background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(6px);padding:var(--sp-3) 0 var(--sp-2);border-bottom:1px solid var(--line)}
+.tb-row{display:flex;flex-wrap:wrap;gap:var(--sp-3);align-items:center;justify-content:space-between}
+.tb-left{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-4);align-items:center}
+.tb-right{display:flex;gap:var(--sp-3);align-items:center}
+fieldset.seg{border:0;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:var(--sp-1)}
+.seg label{position:relative}
+.seg input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.seg span{display:inline-flex;gap:6px;align-items:center;min-height:34px;padding:4px 12px;font-size:14px;border:1px solid var(--line);border-radius:999px;background:var(--surface);cursor:pointer;color:var(--ink-2)}
+.seg span b{font:500 12px var(--mono);color:var(--ink-3);font-variant-numeric:tabular-nums}
+.seg input:checked+span{background:var(--ink);border-color:var(--ink);color:#fff}
+.seg input:checked+span b{color:#d8d4ca}
+.seg input:focus-visible+span{outline:3px solid var(--focus);outline-offset:2px}
+.seg input:disabled+span{opacity:.45;cursor:default}
+.toggle{display:inline-flex;gap:6px;align-items:center;font-size:14px;min-height:34px;cursor:pointer}
+.toggle input{width:16px;height:16px;margin:0}
+.stats{font-size:13px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.stats b{color:var(--ink);font-weight:600}
+#status{margin:var(--sp-2) 0 0;font-size:13px;min-height:1.6em;color:var(--ink-2)}
+#status.ok{color:var(--ok)} #status.error{color:var(--err)}
+
+/* 表格：桌面为表，容器变窄时变卡片 */
+.tablewrap{container-type:inline-size;container-name:list;margin-top:var(--sp-3)}
+.tablewrap:focus{outline:none}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+caption{caption-side:bottom;text-align:left;padding:var(--sp-3) var(--sp-1) 0;font-size:13px;color:var(--ink-2)}
+thead th{position:sticky;top:var(--tb-h);z-index:1;background:var(--surface-2);text-align:left;font-size:12px;font-weight:600;letter-spacing:.04em;color:var(--ink-2);padding:var(--sp-2) var(--sp-3);border-bottom:1px solid var(--line)}
+thead th:first-child{border-top-left-radius:var(--r)} thead th:last-child{border-top-right-radius:var(--r)}
+tbody th,tbody td{padding:var(--sp-4) var(--sp-3);border-bottom:1px solid var(--line);vertical-align:top;text-align:left;font-weight:400}
+tbody tr:last-child>*{border-bottom:0}
+tbody th{width:132px}
+.col-cat{width:172px} .col-rev{width:230px} .col-st{width:118px}
+tr.risk>th{box-shadow:inset 3px 0 0 var(--c-q)}
+.id{font:500 13px/1.4 var(--mono);color:var(--ink);font-variant-numeric:tabular-nums}
+.id a{color:inherit;text-underline-offset:3px}
+.date{display:block;font:400 12px/1.6 var(--mono);color:var(--ink-3)}
+.flags{display:flex;flex-direction:column;align-items:flex-start;gap:4px;margin-top:var(--sp-2)}
+.flag{font:500 12px/1.3 var(--sans);color:var(--c-q);background:var(--c-q-bg);border-radius:4px;padding:2px 6px}
+.flag.batch{font-family:var(--mono);color:var(--ink-2);background:var(--surface-2)}
+
+.ev{margin:0 0 var(--sp-2);padding:6px 10px;border-left:3px solid var(--evidence);background:var(--evidence-bg);border-radius:0 4px 4px 0;font-size:14px;line-height:1.55;max-width:60ch}
+.ev small{display:block;font:600 11px/1.4 var(--sans);letter-spacing:.06em;color:#8a5a12}
+.ev.none{border-left-color:var(--line-strong);background:var(--surface-2);color:var(--ink-2)}
+.ev.none small{color:var(--ink-3)}
+.txt{margin:0;color:var(--ink-2);font-size:14px;line-height:1.65;max-width:62ch}
+.txt mark{background:none;color:var(--ink);text-decoration:underline 2px var(--evidence);text-underline-offset:3px}
+.txt.clamp{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.more{margin-top:4px;min-height:32px;font-size:13px}
+
+select{width:100%;min-height:38px;font:500 14px var(--sans);padding:6px 8px;border:1px solid var(--line-strong);border-radius:var(--r);background:#fff;color:var(--ink)}
+select[data-cat="质量安全"]{border-color:var(--c-q);box-shadow:inset 3px 0 0 var(--c-q)}
+select[data-cat="活动权益"]{box-shadow:inset 3px 0 0 var(--c-a)}
+select[data-cat="订单发货"]{box-shadow:inset 3px 0 0 var(--c-o)}
+select[data-cat="其他"],select[data-cat="信息不足"]{box-shadow:inset 3px 0 0 var(--c-x)}
+.cat-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:var(--sp-2)}
+.rev{display:flex;flex-direction:column;gap:var(--sp-2)}
+.rev .toggle{font-weight:500}
+input[type=text]{width:100%;min-height:38px;font:14px var(--sans);padding:6px 10px;border:1px solid var(--line-strong);border-radius:var(--r);background:#fff;color:var(--ink)}
+input[type=text]::placeholder{color:var(--ink-3)}
+.state{display:inline-block;font:500 12px/1.3 var(--sans);padding:3px 8px;border-radius:4px;background:var(--surface-2);color:var(--ink-2)}
+.state.edited{background:#e6edfb;color:#1f4aa8}
+.orig{display:block;margin-top:6px;font-size:12px;color:var(--ink-3)}
+td.empty{padding:var(--sp-6);text-align:center;color:var(--ink-2)}
+td.empty p{margin:0 0 var(--sp-3)}
+
+.foot{margin-top:var(--sp-4)}
+.foot p{margin:0;font-size:13px;color:var(--ink-2);max-width:80ch}
+
+@container list (width < 760px){
+  table,thead,tbody,tr,th,td,caption{display:block}
+  table{border:0;background:none;display:flex;flex-direction:column}
+  caption{order:1}
+  thead{display:none}
+  tbody tr{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);margin-bottom:var(--sp-3);padding:var(--sp-3) var(--sp-4)}
+  tr.risk{border-left:3px solid var(--c-q)}
+  tr.risk>th{box-shadow:none}
+  tbody th,tbody td{width:auto;padding:var(--sp-2) 0;border:0}
+  tbody th{display:flex;flex-wrap:wrap;gap:4px var(--sp-3);align-items:baseline}
+  .date{display:inline}
+  .flags{flex-direction:row;flex-wrap:wrap;margin:0;width:100%}
+  td[data-label]::before{content:attr(data-label) / attr(data-label);display:block;font:600 12px/1.4 var(--sans);letter-spacing:.04em;color:var(--ink-3);margin-bottom:4px}
+  td.col-cat,td.col-rev,td.col-st{width:auto}
+  select,input[type=text]{min-height:44px;font-size:16px}
+  .toggle{min-height:44px}
+  td.empty{padding:var(--sp-5) var(--sp-3);background:var(--surface);border:1px solid var(--line);border-radius:var(--r)}
+}
+@media (max-width:820px){
+  .wrap{padding:0 var(--sp-4)}
+  header.top .wrap{flex-direction:column;align-items:flex-start;gap:var(--sp-2)}
+  .start{grid-template-columns:1fr}
+  .panel{padding:var(--sp-4)}
+  .toolbar{position:static;backdrop-filter:none;background:none}
+  .tb-right{width:100%;justify-content:space-between}
+  .btn{min-height:44px}
+  .seg span{min-height:40px}
+  body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#content">跳到分拣结果</a>
+<header class="top">
+  <div class="wrap">
+    <div>
+      <h1>公开投诉分拣台</h1>
+      <p class="lede">把一周新增的公开投诉分到质量安全、活动权益、订单发货，附原文依据，标出需人工复核的条目，导出核查清单。</p>
+    </div>
+    <p class="tag"><b>离线演示</b> · 个人概念验证 · 不调用模型</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="notice" aria-labelledby="h-notice">
+    <h2 id="h-notice">使用前请读：这是一个个人概念验证，不是上线产品</h2>
+    <ul>
+      <li><b>性质</b>：作者个人的概念验证作品，与飞鹤及其任何合作方无关，未与企业接触、未访谈、未上线。</li>
+      <li><b>数据</b>：示例的 41 条来自黑猫投诉公开列表（飞鹤商家页，未登录可见，2026-07-15 至 10-15，采集于 2026-10-15）。只保存了单号、日期、状态、标题、摘要与诉求，未保存昵称等用户字段；文本里的订单号、手机号片段已替换为占位符。</li>
+      <li><b>分类与依据</b>：示例数据的分类、原文依据和复核标记由模型（Claude）离线一次性预生成，本页面<b>不调用任何模型</b>；参考标签与模型同源、尚未人工复核，页面上的结果不是准确率证明。</li>
+      <li><b>新文本</b>：粘贴或导入的其他文本只走页面内的关键词规则（不是 AI），结果一律标为「需人工复核」。</li>
+      <li><b>修改</b>：页面上的修改只在当前浏览器里，请导出 CSV 留存。源码与方法说明见仓库 README。</li>
+    </ul>
+  </section>
+  <section id="start" aria-label="选择数据">
+    <div class="start">
+      <div class="panel">
+        <h2>用示例数据看一遍流程</h2>
+        <p class="muted">41 条黑猫投诉公开样本：飞鹤星飞帆系列，2026-07-15 至 10-15。分类与依据由 Claude 离线预生成，页面不实时调用模型。</p>
+        <div><button type="button" class="btn primary lg" id="btn-sample">载入示例数据（41 条）</button></div>
+        <ul class="sources" aria-label="分类来源说明">
+          <li><span class="src ai">离线预生成</span>示例原文：Claude 预先生成的分类与依据</li>
+          <li><span class="src rule">非 AI</span>其他文本：只走关键词规则，一律标为需复核</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>或导入自己的数据</h2>
+        <div>
+          <label class="field" for="paste">粘贴投诉文本，一行一条</label>
+          <textarea id="paste" name="paste" aria-describedby="paste-hint"></textarea>
+          <p class="hint" id="paste-hint">与示例原文完全相同的文本，显示预生成的分类；其他文本只走关键词规则。</p>
+        </div>
+        <div class="row-btns">
+          <button type="button" class="btn" id="btn-paste">分拣粘贴的文本</button>
+          <label class="btn file">选择 CSV / JSON 文件<input type="file" id="file" accept=".csv,.json" aria-describedby="file-hint"></label>
+        </div>
+        <p class="hint" id="file-hint">CSV 需含 text 列（可选 id、date、url）；JSON 为含 text 字段的对象数组。</p>
+        <p class="msg" id="import-msg" role="alert"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="work" aria-labelledby="h-work" hidden>
+    <div class="current">
+      <p id="current-desc"></p>
+      <button type="button" class="btn ghost" id="btn-change" aria-controls="start" aria-expanded="false">更换数据</button>
+    </div>
+
+    <div class="toolbar" id="toolbar">
+      <div class="tb-row">
+        <div class="tb-left">
+          <h2 id="h-work" class="vh" tabindex="-1">分拣结果</h2>
+          <fieldset class="seg" id="f-cat"><legend class="vh">按类别筛选</legend></fieldset>
+          <label class="toggle"><input type="checkbox" id="f-review"> 只看需复核</label>
+        </div>
+        <div class="tb-right">
+          <span class="stats" id="stats"></span>
+          <button type="button" class="btn primary" id="btn-export">导出全部（CSV）</button>
+        </div>
+      </div>
+      <p id="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="tablewrap" id="content" tabindex="-1">
+      <table>
+        <caption>__REVIEW_NOTE__；AI 结果为离线预测，未按人工答案调整。</caption>
+        <thead><tr>
+          <th scope="col">单号 / 日期</th><th scope="col">依据与投诉原文</th><th scope="col" class="col-cat">分类</th>
+          <th scope="col" class="col-rev">人工复核</th><th scope="col" class="col-st">状态</th>
+        </tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+    <div class="foot">
+      <p>导出包含当前数据的全部记录，不受筛选影响；需复核与质量安全的条目排在前面。页面上的修改不会自动保存，请导出 CSV 留存。数据来自黑猫投诉公开列表（未登录采集，未保存昵称，编号片段已脱敏），部分摘要被平台截断。</p>
+    </div>
+  </section>
+</main>
+
+<script>
+const SAMPLE = /*DATA*/null;
+const CATS = ['质量安全','活动权益','订单发货','其他','信息不足'];
+const RULES = [
+  ['质量安全', /异物|虫|怪味|有味道|变质|结块|絮状|颗粒|毛发|卷毛|拉稀|拉肚子|吐奶|勺/],
+  ['活动权益', /集罐|扫码|买一送一|买一赠一|赠品|补贴|积分|活动|权益|兑换|礼赠|送一罐/],
+  ['订单发货', /不发货|拒发|拒绝发货|发货|订单异常|拦截|取消.*订单|限购/],
+];
+const HEALTH = /拉稀|拉肚子|腹泻|吐奶|呕吐|便秘|大便干结|过敏|发烧/;
+const LONG = 90;
+const byText = new Map(SAMPLE.map(r => [r.text, r]));
+let rows = [], filterCat = '全部';
+const $ = id => document.getElementById(id);
+
+function ruleClassify(text){
+  for (const [cat, re] of RULES){
+    const m = text.match(re);
+    if (m){
+      const i = m.index, s = Math.max(0, text.lastIndexOf('，', i) + 1), e = text.indexOf('，', i);
+      return {category: cat, evidence: text.slice(s, e < 0 ? Math.min(text.length, i + 30) : e).slice(0, 40)};
+    }
+  }
+  return {category: '其他', evidence: ''};
+}
+function makeRow(id, date, text, url){
+  const hit = byText.get(text);
+  if (hit) return {...hit, src: 'ai', orig: {category: hit.category, needs_review: hit.needs_review, note: hit.review_reason}, note: hit.review_reason};
+  const r = ruleClassify(text), health = HEALTH.test(text);
+  return {id, date: date || '', text, url: url || '', category: r.category, evidence: r.evidence, health_signal: health,
+          needs_review: true, review_reason: '规则分类，须人工确认', batch_no: null, src: 'rule',
+          orig: {category: r.category, needs_review: true, note: '规则分类，须人工确认'}, note: '规则分类，须人工确认'};
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const noteChanged = r => (r.note || '').trim() !== (r.orig.note || '').trim();
+const edited = r => r.category !== r.orig.category || r.needs_review !== r.orig.needs_review || noteChanged(r);
+/* 修改只存在当前页面：记下上次导出时的修改内容，更换数据时据此判断有没有未导出的改动 */
+const editSig = () => rows.filter(edited).map(r => [r.id, r.category, r.needs_review, (r.note || '').trim()].join('|')).join(';');
+let exportedSig = '';
+const risky = r => r.category === '质量安全' || r.health_signal;
+function highlight(text, ev){
+  if (!ev || !text.includes(ev)) return esc(text);
+  const i = text.indexOf(ev);
+  return esc(text.slice(0, i)) + '<mark>' + esc(ev) + '</mark>' + esc(text.slice(i + ev.length));
+}
+function say(msg, kind){ const s = $('status'); s.textContent = msg; s.className = kind || ''; }
+function importMsg(msg){ const m = $('import-msg'); m.textContent = msg; m.className = msg ? 'msg show error' : 'msg'; }
+
+/* ---------- 统计与筛选 ---------- */
+/* 单选按钮只建一次，之后只更新计数与可用状态，方向键切换时焦点不丢 */
+function buildFilters(){
+  const fs = $('f-cat');
+  fs.querySelectorAll('label').forEach(l => l.remove());
+  ['全部', ...CATS].forEach(c => {
+    const l = document.createElement('label');
+    l.innerHTML = `<input type="radio" name="cat" value="${c}"><span>${c}<b></b></span>`;
+    fs.appendChild(l);
+  });
+}
+function renderFilters(){
+  $('f-cat').querySelectorAll('input').forEach(i => {
+    const c = i.value, n = c === '全部' ? rows.length : rows.filter(r => r.category === c).length;
+    i.nextElementSibling.querySelector('b').textContent = n;
+    i.checked = c === filterCat;
+    i.disabled = !(n || c === '全部' || c === filterCat);
+  });
+}
+function renderStats(){
+  const review = rows.filter(r => r.needs_review).length, ed = rows.filter(edited).length;
+  $('stats').innerHTML = `共 <b>${rows.length}</b> 条 · 需复核 <b>${review}</b> · 已修改 <b>${ed}</b>`;
+  $('btn-export').textContent = `导出全部 ${rows.length} 条（CSV）`;
+}
+function visible(){
+  const onlyReview = $('f-review').checked;
+  return rows.filter(r => (filterCat === '全部' || r.category === filterCat) && (!onlyReview || r.needs_review));
+}
+
+/* ---------- 行 ---------- */
+function rowCells(r){
+  const long = r.text.length > LONG;
+  const flags = [r.health_signal ? '<span class="flag">写到食用后症状</span>' : '',
+                 r.batch_no ? `<span class="flag batch">批次 ${esc(r.batch_no)}</span>` : ''].join('');
+  return `
+    <th scope="row"><span class="id">${r.url ? `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.id)}<span class="vh">（在新窗口打开原文）</span></a>` : esc(r.id)}</span>
+      <span class="date">${esc(r.date || '日期未提供')}</span>${flags ? `<span class="flags">${flags}</span>` : ''}</th>
+    <td data-label="依据与投诉原文">
+      ${r.evidence ? `<p class="ev"><small>依据</small>“${esc(r.evidence)}”</p>` : '<p class="ev none"><small>依据</small>没有找到可摘录的原文依据</p>'}
+      <p class="txt ${long ? 'clamp' : ''}" id="t-${esc(r.id)}">${highlight(r.text, r.evidence)}</p>
+      ${long ? `<button type="button" class="btn ghost more" data-act="more" aria-expanded="false" aria-controls="t-${esc(r.id)}">展开全文</button>` : ''}
+    </td>
+    <td class="col-cat" data-label="分类">
+      <select data-f="category" data-cat="${r.category}" aria-label="单号 ${esc(r.id)} 的类别">
+        ${CATS.map(c => `<option ${c === r.category ? 'selected' : ''}>${c}</option>`).join('')}</select>
+      <div class="cat-meta"><span class="src ${r.src}">${r.src === 'ai' ? '离线预生成' : '非 AI'}</span></div>
+    </td>
+    <td class="col-rev" data-label="人工复核"><div class="rev">
+      <label class="toggle"><input type="checkbox" data-f="needs_review" ${r.needs_review ? 'checked' : ''}> 需人工复核</label>
+      <input type="text" data-f="note" value="${esc(r.note || '')}" placeholder="复核理由或备注" aria-label="单号 ${esc(r.id)} 的复核理由或备注">
+    </div></td>
+    <td class="col-st" data-label="状态"></td>`;
+}
+function paintState(tr, r){
+  tr.classList.toggle('risk', risky(r));
+  tr.querySelector('select').dataset.cat = r.category;
+  const changes = [];
+  if (r.category !== r.orig.category) changes.push('原类别：' + r.orig.category);
+  if (r.needs_review !== r.orig.needs_review) changes.push('原复核：' + (r.orig.needs_review ? '需复核' : '无需复核'));
+  if (noteChanged(r)) changes.push('备注已改');
+  tr.querySelector('td.col-st').innerHTML = edited(r)
+    ? `<span class="state edited">已人工修改</span><span class="orig">${esc(changes.join('；'))}</span>`
+    : `<span class="state">${r.needs_review ? '待复核' : '未修改'}</span>`;
+}
+function render(){
+  renderFilters(); renderStats();
+  const list = visible(), tb = $('tbody');
+  if (!list.length){
+    tb.innerHTML = `<tr><td colspan="5" class="empty"><p>当前筛选下没有记录。</p><button type="button" class="btn" data-act="clear">清除筛选</button></td></tr>`;
+    return;
+  }
+  tb.innerHTML = '';
+  for (const r of list){
+    const tr = document.createElement('tr');
+    tr.dataset.id = r.id; tr.innerHTML = rowCells(r); paintState(tr, r);
+    tb.appendChild(tr);
+  }
+}
+
+/* ---------- 交互：只更新改动的那一行，不打断键盘焦点 ---------- */
+$('tbody').addEventListener('change', e => {
+  const tr = e.target.closest('tr[data-id]'); if (!tr) return;
+  const r = rows.find(x => x.id === tr.dataset.id), f = e.target.dataset.f;
+  if (f === 'category') r.category = e.target.value;
+  if (f === 'needs_review') r.needs_review = e.target.checked;
+  if (f === 'note') r.note = e.target.value;
+  paintState(tr, r); renderStats(); renderFilters();
+  const what = f === 'category' ? `类别改为「${r.category}」` : f === 'needs_review' ? (r.needs_review ? '标为需复核' : '取消需复核') : '备注已更新';
+  say(`单号 ${r.id}：${what}。修改只在当前页面，导出 CSV 才会留存，刷新或更换数据会丢失。${f === 'note' ? '' : '筛选结果在重新筛选后更新。'}`, 'ok');
+});
+$('tbody').addEventListener('click', e => {
+  const b = e.target.closest('button[data-act]'); if (!b) return;
+  if (b.dataset.act === 'more'){
+    const t = $(b.getAttribute('aria-controls')), open = b.getAttribute('aria-expanded') === 'true';
+    t.classList.toggle('clamp', open); b.setAttribute('aria-expanded', String(!open)); b.textContent = open ? '展开全文' : '收起';
+  }
+  if (b.dataset.act === 'clear'){
+    filterCat = '全部'; $('f-review').checked = false; render(); say('已清除筛选。');
+  }
+});
+$('f-cat').addEventListener('change', e => { filterCat = e.target.value; render(); say(`筛选：${filterCat}，显示 ${visible().length} 条。`); });
+$('f-review').addEventListener('change', () => { render(); say($('f-review').checked ? `只看需复核，显示 ${visible().length} 条。` : `显示全部 ${visible().length} 条。`); });
+
+/* ---------- 载入 ---------- */
+function setStartOpen(open){
+  $('start').hidden = !open; $('btn-change').setAttribute('aria-expanded', String(open));
+  $('btn-change').textContent = open ? '收起数据来源' : '更换数据';
+}
+function load(newRows, desc){
+  const dropped = editSig() !== exportedSig; exportedSig = '';
+  rows = newRows; filterCat = '全部'; $('f-review').checked = false;
+  const ai = rows.filter(r => r.src === 'ai').length, rule = rows.length - ai;
+  $('current-desc').innerHTML = `<b>当前数据：${esc(desc)}</b><span>${rows.length} 条 · 分类来源：</span>` +
+    (ai ? `<span class="src ai">离线预生成</span><span>${ai} 条</span>` : '') + (rule ? `<span class="src rule">非 AI</span><span>${rule} 条</span>` : '');
+  importMsg(''); $('work').hidden = false; setStartOpen(false); buildFilters(); render();
+  measureToolbar();
+  say(`已载入 ${rows.length} 条。${rule ? `其中 ${rule} 条按关键词规则分类，已全部标为需复核。` : ''}${dropped ? '上一份数据有未导出的修改，已随更换数据丢弃。' : ''}`, 'ok');
+  $('work').scrollIntoView({block: 'start'}); $('h-work').focus({preventScroll: true});
+}
+$('btn-sample').addEventListener('click', () => load(SAMPLE.map(r => makeRow(r.id, r.date, r.text, r.url)), '示例数据'));
+$('btn-change').addEventListener('click', () => {
+  const open = $('start').hidden; setStartOpen(open);
+  if (open) $('btn-sample').focus();
+});
+$('btn-paste').addEventListener('click', () => {
+  const lines = $('paste').value.split('\n').map(s => s.trim()).filter(Boolean);
+  if (!lines.length){ importMsg('没有可分拣的文本：请先在上面的输入框里粘贴投诉，一行一条。'); $('paste').focus(); return; }
+  load(lines.map((t, i) => makeRow('P' + String(i + 1).padStart(3, '0'), '', t, '')), '粘贴的文本');
+});
+function parseCSV(s){
+  const out = []; let row = [], cur = '', q = false;
+  for (let i = 0; i < s.length; i++){
+    const c = s[i];
+    if (q){ if (c === '"' && s[i + 1] === '"'){ cur += '"'; i++; } else if (c === '"') q = false; else cur += c; }
+    else if (c === '"') q = true; else if (c === ',') { row.push(cur); cur = ''; }
+    else if (c === '\n') { row.push(cur.replace(/\r$/, '')); out.push(row); row = []; cur = ''; } else cur += c;
+  }
+  if (cur || row.length){ row.push(cur); out.push(row); }
+  return out;
+}
+async function importFile(f){
+  const s = (await f.text()).replace(/^﻿/, '');
+  let items;
+  try {
+    if (f.name.toLowerCase().endsWith('.json')) {
+      items = JSON.parse(s);
+      if (!Array.isArray(items)) throw new Error('JSON 顶层应为数组，例如 [{"id":"1","text":"……"}]');
+    } else {
+      const [h, ...body] = parseCSV(s);
+      const head = (h || []).map(k => k.trim());
+      if (!head.includes('text')) throw new Error(`没有找到 text 列（读到的列：${head.join('、') || '无'}）`);
+      items = body.filter(r => r.length > 1 || r[0]).map(r => Object.fromEntries(head.map((k, i) => [k, r[i]])));
+    }
+  } catch (err) {
+    importMsg(`「${f.name}」读取失败：${err instanceof SyntaxError ? '不是有效的 JSON' : err.message}。请检查格式后重新选择文件。`); return;
+  }
+  items = items.filter(x => x && typeof x.text === 'string' && x.text.trim());
+  if (!items.length){ importMsg(`「${f.name}」里没有可用的 text 内容。`); return; }
+  load(items.map((x, i) => makeRow(x.id || 'F' + String(i + 1).padStart(3, '0'), x.date, x.text.trim(), x.url)), `文件 ${f.name}`);
+}
+$('file').addEventListener('change', e => { const f = e.target.files[0]; e.target.value = ''; if (f) importFile(f); });
+
+/* ---------- 导出 ---------- */
+$('btn-export').addEventListener('click', () => {
+  if (!rows.length){ say('没有可导出的记录。', 'error'); return; }
+  const head = ['投诉单号','日期','类别','需人工复核','复核理由/备注','依据原文','写到症状','批次号','是否人工修改','分类来源','原文链接'];
+  const order = r => (r.needs_review ? 0 : 2) + (r.category === '质量安全' ? 0 : 1);
+  const body = [...rows].sort((a, b) => order(a) - order(b)).map(r => [r.id, r.date, r.category, r.needs_review ? '是' : '否', r.note || '', r.evidence || '',
+    r.health_signal ? '是' : '否', r.batch_no || '', edited(r) ? '是' : '否',
+    r.src === 'ai' ? 'Claude 离线预生成' : '关键词规则（非 AI）', r.url || '']);
+  const csv = '﻿' + [head, ...body].map(x => x.map(v => `"${String(v).replace(/"/g, '""')}"`).join(',')).join('\r\n');
+  const name = `核查清单_${new Date().toISOString().slice(0, 10)}.csv`;
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([csv], {type: 'text/csv;charset=utf-8'}));
+  a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  exportedSig = editSig();
+  say(`已导出 ${name}：全部 ${rows.length} 条（不受当前筛选影响），需复核 ${rows.filter(r => r.needs_review).length} 条排在前面，已人工修改 ${rows.filter(edited).length} 条。`, 'ok');
+});
+
+/* 吸顶表头紧贴在操作栏下方 */
+function measureToolbar(){ document.documentElement.style.setProperty('--tb-h', $('toolbar').offsetHeight + 'px'); }
+new ResizeObserver(measureToolbar).observe($('toolbar'));
+</script>
+</body>
+</html>

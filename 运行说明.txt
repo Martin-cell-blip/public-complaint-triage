@@ -1,0 +1,43 @@
+飞鹤星飞帆系列公开投诉分拣 · 个人概念验证案例 —— 运行说明
+
+环境：Python 3.10+，pip install openpyxl；生成 Word 需要 pandoc；演示截图另需 playwright（可不装）。
+在本目录下依次运行：
+
+  python src/00_anonymize.py        （仅持有原始件时）data/raw 原始 JSON → data/public 公开版 + 脱敏报告；--check 只复查公开版
+  python src/01_prepare.py          公开版 JSON → data/complaints.csv、data/case.db（SQLite）
+  python src/02_baseline_rules.py   关键词规则基线（含只调换顺序的 v2）→ labels/
+  python src/03_run_sql.py          执行 src/analysis.sql → outputs/sql_*.csv
+  python src/04_evaluate.py         AI / 规则 / 参考标签对比 → outputs/eval_cases.csv、eval_summary.json
+  python src/05_build_demo.py       生成 demo/投诉分拣演示.html（双击打开，无需服务器）
+  python src/06_build_excel.py      生成 docs/飞鹤投诉分拣案例_数据与测算.xlsx
+  python src/08_build_docx.py       按最终标签与评测结果生成 Word：根目录为完整版（含附录 A 讲稿、附录 B，不入仓库），docs/ 为公开版
+  python src/09_screenshot.py       （可选，需 playwright）重拍 outputs/img/demo.png
+
+参考标签人工复核（labels/参考标签复核表.xlsx）：
+  python src/07_review_sheet.py make            生成复核表；文件已存在时拒绝覆盖，确需重建加 --force
+  python src/07_review_sheet.py apply           只回写「本行已复核＝是」的行；填了修改却没标「是」的行会被拒绝并列出单号
+  python src/07_review_sheet.py apply --confirm-all
+                                                整表视为已逐条复核（空白＝同意）。只在复核人明确确认全表看完之后使用
+  回写后从 03 起重跑：03 → 04 → 05 → 06 → 08。
+
+不会变的东西：AI 预测（labels/claude_labels.json）与关键词规则预测是复核前固定的，复核后不重新生成，
+避免拿按人工答案调过的预测来比较。脚本不调用任何模型。
+
+随复核自动变化的东西：类别计数、SQL 结果、一致率、质量安全占比与成本测算（Excel 为公式，Word 由同一公式计算）、
+以及 Excel、Word、网页里的复核状态说明（按 reference_labels.csv 的 label_status 实际取值生成）。
+
+08 停下时：说明复核改变了正文某个举例所依赖的事实，终端会列出是哪一段。此时 Word 保持旧版本，
+需先改写 src/case_template.txt 的对应段落再运行 08；Excel 与网页只含数据，已按新标签更新。
+
+目录：
+  data/raw/heimao_xingfeifan_20261015.json   黑猫投诉公开列表原始数据（41 条，未保存昵称）；不入仓库（.gitignore）
+  data/public/heimao_xingfeifan_20261015_public.json   公开版（00 脱敏生成；订单号/手机号片段已替换），仓库里的唯一数据源
+  data/ai_input.jsonl                        当时喂给 Claude 子代理的输入（脱敏前 text 列）；不入仓库
+  labels/reference_labels.csv                 参考标签（label_status 记录每行是否已人工复核）
+  labels/claude_labels.json                   AI 分类结果（Claude 子代理离线生成，不读参考标签）
+  labels/baseline_labels.json / baseline_v2_labels.json   关键词规则结果
+  src/common.py                               复核状态说明与成本公式（各脚本共用）
+  src/case_template.txt                       Word 正文模板（占位符由 08 填充）
+  src/prompt_classifier.txt                   AI 分类提示词（字段与规则）
+  research/                                   企业研究的检索记录与港交所年度业绩公告 PDF
+
