@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """脱敏：黑猫投诉原始采集件 → 公开版数据。
   输入  data/raw/heimao_xingfeifan_20261015.json   （原始件，不入仓库；见 .gitignore）
-  输出  data/public/heimao_xingfeifan_20261015_public.json   （仓库里只放这一份，01_prepare.py 从它开始）
+  输出  data/public/heimao_complaints_20261015_public.json   （仓库里只放这一份，01_prepare.py 从它开始）
         data/public/anonymization_report.json              （每条规则替换了多少处、涉及哪些单号）
 运行：python src/00_anonymize.py        原始件不存在时直接退出并提示；公开版已存在且内容相同时不改动文件
        python src/00_anonymize.py --check   只检查现有公开版是否仍含未脱敏片段，不读原始件（仓库里的人可以跑）
@@ -22,7 +22,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 RAW = ROOT / 'data' / 'raw' / 'heimao_xingfeifan_20261015.json'
 PUB_DIR = ROOT / 'data' / 'public'
-PUB = PUB_DIR / 'heimao_xingfeifan_20261015_public.json'
+PUB = PUB_DIR / 'heimao_complaints_20261015_public.json'
 REPORT = PUB_DIR / 'anonymization_report.json'
 
 KEEP = ['id', 'date', 'status', 'title', 'excerpt', 'target', 'demand']

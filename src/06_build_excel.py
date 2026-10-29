@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""生成 docs/飞鹤投诉分拣案例_数据与测算.xlsx：说明 / 数据 / 分类结果 / 评测汇总 / SQL结果 / 来源 / 成本测算（公式实时计算）。
+"""生成 docs/奶粉投诉分拣案例_数据与测算.xlsx：说明 / 数据 / 分类结果 / 评测汇总 / SQL结果 / 来源 / 成本测算（公式实时计算）。
 运行顺序：01 → 02 → 03 → 04 之后运行本脚本。
 """
 from openpyxl import Workbook
@@ -7,7 +7,7 @@ from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.utils import get_column_letter
 from common import ROOT, WINDOW_WEEKS, BRAND_WEEKLY, COST, load_ref, load_json, read_csv, review_state, quality_share
 
-OUT = ROOT / 'docs' / '飞鹤投诉分拣案例_数据与测算.xlsx'
+OUT = ROOT / 'docs' / '奶粉投诉分拣案例_数据与测算.xlsx'
 HEAD = PatternFill('solid', fgColor='1D1B17'); HEAD_FONT = Font(bold=True, color='F4EFE4')
 INPUT = PatternFill('solid', fgColor='FFF2CC'); OUTF = PatternFill('solid', fgColor='D8E8E1')
 THIN = Border(bottom=Side(style='thin', color='CFC5AD'))
@@ -39,9 +39,9 @@ wb = Workbook()
 # ---------- 说明 ----------
 ws = wb.active; ws.title = '说明'
 lines = [
-    ('飞鹤业务研究与个人概念验证案例：公开投诉分拣（星飞帆系列）', True),
-    ('范围：基于公开资料的飞鹤业务研究与个人概念验证，包括公开投诉的数据分析、关键词规则与 AI 的对比，以及单位经济测算；内部流程待访谈确认。', False),
-    (f"数据：黑猫投诉 · 飞鹤商家页公开列表（未登录，2026-10-15 采集），筛选标题或摘要含「星飞帆」「卓睿」、发起日期 2026-07-15 至 2026-10-15，共 {len(data)} 条；按投诉单号去重；用户昵称未保存；{sum(r['truncated'] == '1' for r in data)} 条摘要被平台截断。", False),
+    ('某奶粉品牌业务研究与个人概念验证案例：公开投诉分拣（单一产品系列）', True),
+    ('范围：基于公开资料的某奶粉品牌业务研究与个人概念验证（与该品牌无关），包括公开投诉的数据分析、关键词规则与 AI 的对比，以及单位经济测算；内部流程待访谈确认。', False),
+    (f"数据：黑猫投诉 · 该品牌商家页公开列表（未登录，2026-10-15 采集），筛选标题或摘要含该系列两个产品名、发起日期 2026-07-15 至 2026-10-15，共 {len(data)} 条；按投诉单号去重；用户昵称未保存；{sum(r['truncated'] == '1' for r in data)} 条摘要被平台截断。", False),
     (f'口径：占比以这 {len(data)} 条公开投诉为分母，描述样本结构。', False),
     (f"标签（{state['short']}，{state['k']}/{state['n']}）：{state['long']} AI 结果由一个不读参考标签的 Claude 子代理离线批量生成，复核后不重新生成。", False),
     ('成本测算：黄色格为假设（时长、时薪、模型费、维护工时，可改），绿色格为按数据与标签计算的公式。', False),
@@ -90,17 +90,17 @@ for j, w in enumerate([14, 12, 14, 18, 10, 40, 48], 1):
 # ---------- 来源 ----------
 ws = wb.create_sheet('来源')
 src = [
-    ('飞鹤主要通过 2,800 余名线下客户（经销商）覆盖 7 万余个零售点；线下客户收入占乳制品收入 73.3%；产品也直接在大型电商平台及自有网站、App 销售', '官方披露', '中国飞鹤 2025 年度业绩公告（港交所）', 'https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032602610.pdf', '2026-03-26', 'p.20「Sales and Distribution Network」'),
+    ('该品牌主要通过 2,800 余名线下客户（经销商）覆盖 7 万余个零售点；线下客户收入占乳制品收入 73.3%；产品也直接在大型电商平台及自有网站、App 销售', '官方披露', '该公司 2025 年度业绩公告（港交所）', 'https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032602610.pdf', '2026-03-26', 'p.20「Sales and Distribution Network」'),
     ('营销三要素：面对面研讨会（2025 年超 70 万场）、最大化线上互动、定向媒体曝光', '官方披露', '同上', '同上', '2026-03-26', 'p.21 营销策略'),
     ('年度业绩公告全文未出现 AI、artificial intelligence、digital、smart 等词', '作者检索（官方文件）', '同上（pdfplumber 全文检索）', '同上', '2026-03-26', '全文'),
-    ('2026 上半年线下客户收入占乳制品收入 70.5%，约 33 万场面对面研讨会', '第三方整理的官方公告摘要', 'Reportify · 中国飞鹤 2026 中期业绩', 'https://reportify.cn/financials/1290110753197658112', '2026-08-26', '渠道段；港交所原文未取得'),
+    ('2026 上半年线下客户收入占乳制品收入 70.5%，约 33 万场面对面研讨会', '第三方整理的官方公告摘要', 'Reportify · 该公司 2026 中期业绩', 'https://reportify.cn/financials/1290110753197658112', '2026-08-26', '渠道段；港交所原文未取得'),
     ('2025 年营收 181.1 亿元、净利润 20.9 亿元；星妈会会员突破 8800 万；全龄营养转型', '第三方报道（企业信息）', '新华网', 'https://app.xinhuanet.com/news/article.html?articleId=202603274fd9f77a3d9d4b9e963d944d5d7e39d1', '2026-03-27', '正文'),
     ('依托火山引擎 HiAgent 搭建统一 AI 应用平台，已开发 436 个智能体；已应用场景为设备运维、膜清洗工艺、人事管理，未提消费者/客服/电商', '第三方报道（企业自述）', '鲁网（中国日报网转载）', 'https://cn.chinadaily.com.cn/a/202608/27/WS6a8ffbade4b09a165c7866ff.html', '2026-08-27', '正文'),
     ('内部 AI 平台接入 DeepSeek；「乳业 AI 场景地图」含电子商务、终端支持等，属规划，未说明上线情况', '第三方报道', '第一财经（新浪财经）', 'https://finance.sina.com.cn/roll/2025-02-20/doc-inemcpfe4627361.shtml', '2025-02-20', '正文'),
     ('客服智能质检覆盖 400 呼入、外呼与 IM 文本，全量质检；未提电商平台评价或公开投诉平台', '厂商案例（自述，未经第三方验证）', '沃丰科技官网', 'https://www.udesk.cn/ucm/report/52194', '2023-12-14', '正文'),
     ('2025 年投诉 48 小时结案率 94%；400 热线满意度 99%、星妈会在线 96%；风险框架新增「AI 技术应用风险」「直播业务风险」', '第三方转述官方 ESG 报告（原文未取得，待核）', '证券之星（网易号转载）', 'https://www.163.com/dy/article/KUG6HUGB051984TV.html', '2026-06-03', '客户服务段'),
-    ('黑猫投诉飞鹤商家页显示近 30 天投诉量 52；本案例样本 41 条中列表显示「已回复」14 条', '公开数据（作者采集）', '黑猫投诉 · 飞鹤', 'https://tousu.sina.com.cn/company/view/?couid=1888345895', '2026-10-15 访问', '商家页头部与列表'),
-    ('飞鹤内部如何处理公开投诉平台与电商评价、是否已用 AI 分拣', '尚未找到证据', '—', '—', '—', '列为访谈问题'),
+    ('黑猫投诉该品牌商家页显示近 30 天投诉量 52；本案例样本 41 条中列表显示「已回复」14 条', '公开数据（作者采集）', '黑猫投诉 · 该品牌商家页', 'https://tousu.sina.com.cn/company/view/?couid=1888345895', '2026-10-15 访问', '商家页头部与列表'),
+    ('该品牌内部如何处理公开投诉平台与电商评价、是否已用 AI 分拣', '尚未找到证据', '—', '—', '—', '列为访谈问题'),
 ]
 table(ws, [dict(zip(['结论', '证据类型', '来源', '链接', '发布日期', '原文位置'], s)) for s in src], [60, 22, 24, 50, 12, 24])
 
@@ -109,7 +109,7 @@ ws = wb.create_sheet('成本测算')
 ws.column_dimensions['A'].width = 40; ws.column_dimensions['B'].width = 14; ws.column_dimensions['C'].width = 70
 ws['A1'] = '净价值 ＝ 节省的人工处理成本 － 新增复核、模型及维护成本（按周）'; ws['A1'].font = Font(bold=True, size=12)
 inputs = [
-    ('每周新增条数', f"=(COUNTA(数据!A:A)-1)/{WINDOW_WEEKS}", f'实测（公式）：「数据」表样本条数 / {WINDOW_WEEKS} 周；飞鹤全部品牌约 {BRAND_WEEKLY} 条/周（160 条 / 14 周）'),
+    ('每周新增条数', f"=(COUNTA(数据!A:A)-1)/{WINDOW_WEEKS}", f'实测（公式）：「数据」表样本条数 / {WINDOW_WEEKS} 周；该商家页全部品牌约 {BRAND_WEEKLY} 条/周（160 条 / 14 周）'),
     ('人工：每条分拣＋摘依据＋填清单（分钟）', COST['manual_min'], '假设：读完一条约 1–2 分钟，判断与填表约 2 分钟；试点时实测替换'),
     ('工具辅助后：每条复核（分钟）', COST['review_min'], '假设：看类别与高亮依据，确认或改一下'),
     ('质量安全类占比（这类仍须人工通读，不计节省）', '=COUNTIF(分类结果!C:C,"质量安全")/(COUNTA(分类结果!A:A)-1)',
@@ -146,7 +146,7 @@ ws['A23'] = '敏感性：不同周量下的净价值（其他假设同上）'; w
 ws['A24'], ws['B24'], ws['C24'] = '每周新增条数', '净价值（元/周）', '对应情形'
 for c in ('A24', 'B24', 'C24'):
     ws[c].fill = HEAD; ws[c].font = HEAD_FONT
-scen = [('=B4', '本系列公开投诉（实测，随数据变化）'), (BRAND_WEEKLY, '飞鹤全部品牌公开投诉（实测）'), (50, '假设：再加一个电商平台的差评'),
+scen = [('=B4', '本系列公开投诉（实测，随数据变化）'), (BRAND_WEEKLY, '该商家页全部品牌公开投诉（实测）'), (50, '假设：再加一个电商平台的差评'),
         (200, '假设：多平台差评＋客服工单'), (1000, '假设：全渠道评价与工单')]
 for i, (n, s) in enumerate(scen, 25):
     ws.cell(i, 1, n).number_format = '0.0'; c = ws.cell(i, 2, f'=A{i}*($B$13-$B$9)-$B$16'); c.fill = OUTF; c.number_format = '0.00'; ws.cell(i, 3, s)

@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 WINDOW_WEEKS = 13          # 样本窗口 2026-07-15 至 2026-10-15，按 13 周计
-BRAND_WEEKLY = round(160 / 14, 1)   # 黑猫投诉飞鹤商家页全部品牌：160 条 / 14 周（2026-07-09 至 10-15，采集时实测）
+BRAND_WEEKLY = round(160 / 14, 1)   # 黑猫投诉该商家页全部品牌：160 条 / 14 周（2026-07-09 至 10-15，采集时实测）
 
 # 成本假设（Excel「成本测算」表的黄色格使用同一组默认值）
 COST = {'manual_min': 4, 'review_min': 1.5, 'wage': 60, 'model_yuan': 0.01, 'maint_hours': 2, 'build_days': 3}

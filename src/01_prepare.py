@@ -7,7 +7,7 @@ import json, re, sqlite3, csv, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-RAW = ROOT / 'data' / 'public' / 'heimao_xingfeifan_20261015_public.json'
+RAW = ROOT / 'data' / 'public' / 'heimao_complaints_20261015_public.json'
 CSV_OUT = ROOT / 'data' / 'complaints.csv'
 DB = ROOT / 'data' / 'case.db'
 
@@ -18,7 +18,7 @@ raw = json.loads(RAW.read_text(encoding='utf-8'))
 # 文本提及的渠道：只认明写的平台/门店词，没写就是「未说明」；提及≠购买渠道（如「等小程序更新」也会命中），只作粗分
 CHANNELS = [
     ('京东', r'京东'), ('天猫/淘宝', r'天猫|淘宝'), ('抖音', r'抖音'), ('拼多多', r'拼多多'),
-    ('飞鹤小程序/星妈会', r'小程序|星妈会'),
+    ('品牌小程序/会员平台', r'小程序|星妈会'),
     ('线下门店', r'门店|实体店|母婴店|孩子王|代理|商行|生活馆|乐友|授权店|宝城店|店面'),
 ]
 HEALTH = r'拉稀|拉肚子|腹泻|吐奶|呕吐|便秘|大便干结|过敏|发烧|湿疹|住院'

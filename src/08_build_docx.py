@@ -9,7 +9,7 @@ from pathlib import Path
 from common import ROOT, WINDOW_WEEKS, BRAND_WEEKLY, COST, load_ref, load_json, read_csv, review_state, quality_share, cost
 
 REF_DOC = Path.home() / '.claude' / 'tools' / 'md2office' / 'ref_portrait.docx'
-OUT = ROOT / '飞鹤公开投诉分拣_AI小场景案例.docx'
+OUT = ROOT / '奶粉公开投诉分拣_AI小场景案例_完整版.docx'
 
 data = read_csv(ROOT / 'data' / 'complaints.csv')
 ref_rows = load_ref()
@@ -140,7 +140,7 @@ filled = re.sub(r'\{\{(\w+)\}\}', lambda m: str(ctx[m.group(1)]), tpl)
 
 # 两份输出：根目录为完整版（含附录 A 面试讲稿与附录 B 本机运行说明，不入仓库）；
 # docs/ 为公开版（去掉附录 A、B，正文与附录 C 不变），仓库里只放公开版。
-PUBLIC_OUT = ROOT / 'docs' / '飞鹤公开投诉分拣_AI小场景案例.docx'
+PUBLIC_OUT = ROOT / 'docs' / '奶粉公开投诉分拣_AI小场景案例.docx'
 public = re.sub(r'\n# 附录 A：.*?(?=\n# 附录 C：)', '\n', filled, flags=re.S)
 assert '附录 A' not in public and '附录 B' not in public and '# 附录 C' in public
 PUBLIC_OUT.parent.mkdir(exist_ok=True)

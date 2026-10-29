@@ -1,4 +1,4 @@
-飞鹤星飞帆系列公开投诉分拣 · 个人概念验证案例 —— 运行说明
+奶粉公开投诉分拣（某品牌单一产品系列）· 个人概念验证案例 —— 运行说明
 
 环境：Python 3.10+，pip install openpyxl；生成 Word 需要 pandoc；演示截图另需 playwright（可不装）。
 在本目录下依次运行：
@@ -9,7 +9,7 @@
   python src/03_run_sql.py          执行 src/analysis.sql → outputs/sql_*.csv
   python src/04_evaluate.py         AI / 规则 / 参考标签对比 → outputs/eval_cases.csv、eval_summary.json
   python src/05_build_demo.py       生成 demo/投诉分拣演示.html（双击打开，无需服务器）
-  python src/06_build_excel.py      生成 docs/飞鹤投诉分拣案例_数据与测算.xlsx
+  python src/06_build_excel.py      生成 docs/奶粉投诉分拣案例_数据与测算.xlsx
   python src/08_build_docx.py       按最终标签与评测结果生成 Word：根目录为完整版（含附录 A 讲稿、附录 B，不入仓库），docs/ 为公开版
   python src/09_screenshot.py       （可选，需 playwright）重拍 outputs/img/demo.png
 
@@ -31,7 +31,7 @@
 
 目录：
   data/raw/heimao_xingfeifan_20261015.json   黑猫投诉公开列表原始数据（41 条，未保存昵称）；不入仓库（.gitignore）
-  data/public/heimao_xingfeifan_20261015_public.json   公开版（00 脱敏生成；订单号/手机号片段已替换），仓库里的唯一数据源
+  data/public/heimao_complaints_20261015_public.json   公开版（00 脱敏生成；订单号/手机号片段已替换），仓库里的唯一数据源
   data/ai_input.jsonl                        当时喂给 Claude 子代理的输入（脱敏前 text 列）；不入仓库
   labels/reference_labels.csv                 参考标签（label_status 记录每行是否已人工复核）
   labels/claude_labels.json                   AI 分类结果（Claude 子代理离线生成，不读参考标签）
